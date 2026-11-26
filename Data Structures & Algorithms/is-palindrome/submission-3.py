@@ -1,0 +1,14 @@
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        clean = re.sub(r'[^a-zA-Z0-9]', '', s).lower()
+        l = len(clean)
+        # print(l)
+        for i in range(l//2):
+            # print(clean[i], clean[l-1])
+            if clean[i]== clean[~i]:
+                # print(clean[i], clean[l-1])
+                continue
+            else:
+                return False
+        return True
+        
